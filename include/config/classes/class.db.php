@@ -14,7 +14,7 @@ class DB
 	private $hostName = 'localhost';
 	private $username = 'root';
 	private $password = '';
-	private $DBname = 'phpshopppingcart_dbLinux.sql';
+	private $DBname = 'phpshoppingcart_db';
 	
 	// Connect to database
 	public function connect()

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 14 Gru 2019, 13:21
+-- Czas generowania: 08 Sty 2020, 14:14
 -- Wersja serwera: 10.4.6-MariaDB
 -- Wersja PHP: 7.3.8
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `phpshopppingcart_dblinux.sql`
+-- Baza danych: `phpshoppingcart_db`
 --
 
 -- --------------------------------------------------------
@@ -50,7 +50,7 @@ CREATE TABLE `sc_admins` (
 --
 
 INSERT INTO `sc_admins` (`adminID`, `adminEmail`, `adminUsername`, `adminPassword`, `adminPasswordRecovery`, `adminSecurityCode`, `adminSecurityEnabled`, `adminLanguage`, `adminPower`, `adminStatus`, `adminPrimary`, `adminLoginIP`, `adminLoginDate`, `adminAdded`) VALUES
-(1, 'admin@gmail.com', 'Admin', 'a3626926ec37c18d442b9773fba640bf', NULL, '992359', '1', 'en_US', 'admin', '1', '1', 'adminIP', '2019-12-07 12:20:11', '2019-11-18 00:00:00');
+(1, 'my.web.carrer@gmail.com', 'Admin', 'a3626926ec37c18d442b9773fba640bf', NULL, '576781', '1', 'en_US', 'admin', '1', '1', 'adminIP', '2019-12-21 13:41:37', '2019-11-18 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -220,12 +220,12 @@ INSERT INTO `sc_options` (`optionID`, `optionName`, `optionValue`, `optionLoad`)
 (53, 'SITE_PAGE_INVOICE', '13', '1'),
 (54, 'ADMIN_THEME', 'Default', '1'),
 (55, 'ADMIN_THEME_PATH', 'default', '1'),
-(56, 'SERVER_EMAIL_ADDRESS', 'no-reply@localhost/PHP_CART', '1'),
-(57, 'SERVER_MAIL_PORT', '', '1'),
-(58, 'SERVER_MAIL_USER', '', '1'),
-(59, 'SERVER_MAIL_PASS', '', '1'),
-(60, 'SERVER_MAIL_ENCRYPTION', '', '1'),
-(61, 'SERVER_MAIL_NAME', '', '1');
+(56, 'SERVER_EMAIL_ADDRESS', 'my.web.carrer@gmail.com', '1'),
+(57, 'SERVER_MAIL_PORT', '465', '1'),
+(58, 'SERVER_MAIL_USER', 'my.web.carrer@gmail.com', '1'),
+(59, 'SERVER_MAIL_PASS', 'biala135', '1'),
+(60, 'SERVER_MAIL_ENCRYPTION', 'ssl', '1'),
+(61, 'SERVER_MAIL_NAME', 'smtp.gmail.com', '1');
 
 -- --------------------------------------------------------
 
@@ -345,7 +345,7 @@ CREATE TABLE `sc_pages` (
 --
 
 INSERT INTO `sc_pages` (`pageID`, `pageTitle`, `pageURL`, `pageKeywords`, `pageAboutShort`, `pageAboutLong`, `pageScriptTop`, `pageScriptBottom`, `pageCSS`, `pageSidebarID`, `pageSidebarPosition`, `pageViews`, `pageStatus`, `pageUpdate`, `pageAdded`) VALUES
-(1, 'PHP Shopping Cart', 'php-shopping-cart', NULL, NULL, NULL, NULL, NULL, NULL, 1, 'right', 67, 'public', NULL, '2019-11-06 00:00:00'),
+(1, 'PHP Shopping Cart', 'php-shopping-cart', NULL, NULL, NULL, NULL, NULL, NULL, 1, 'right', 69, 'public', NULL, '2019-11-06 00:00:00'),
 (2, 'Products', 'products', NULL, NULL, NULL, NULL, NULL, NULL, 1, 'right', 0, 'public', NULL, '2019-11-07 00:00:00'),
 (3, 'Cart', 'cart', NULL, NULL, NULL, NULL, NULL, NULL, 1, 'right', 0, 'public', NULL, '2019-11-07 00:00:00'),
 (4, 'Payment', 'payment', NULL, NULL, NULL, NULL, NULL, NULL, 1, 'right', 0, 'public', NULL, '2019-11-07 00:00:00'),
@@ -1396,7 +1396,186 @@ INSERT INTO `sc_traffic` (`trafficID`, `trafficIP`, `trafficCountryName`, `traff
 (1060, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-12 19:28:38'),
 (1061, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-12 19:32:15'),
 (1062, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-12 21:52:47'),
-(1063, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-12 22:09:54');
+(1063, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-12 22:09:54'),
+(1064, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 13:31:03'),
+(1065, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 13:59:26'),
+(1066, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 13:59:30'),
+(1067, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 13:59:31'),
+(1068, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/index.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 13:59:39'),
+(1069, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 13:59:45'),
+(1070, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 14:11:52'),
+(1071, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-14 14:11:56'),
+(1072, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:53:39'),
+(1073, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:55:01'),
+(1074, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:55:01'),
+(1075, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:55:09'),
+(1076, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:55:38'),
+(1077, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:56:27'),
+(1078, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/index.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:56:38'),
+(1079, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:56:49'),
+(1080, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:57:20'),
+(1081, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:57:22'),
+(1082, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:59:05'),
+(1083, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:59:05'),
+(1084, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 17:59:11'),
+(1085, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:00:18'),
+(1086, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:00:19'),
+(1087, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:00:39'),
+(1088, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:01:08'),
+(1089, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:01:10'),
+(1090, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:01:24'),
+(1091, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/securityCode.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:02:50'),
+(1092, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:02:50'),
+(1093, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:04:22'),
+(1094, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:04:23'),
+(1095, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:11:03'),
+(1096, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:11:19'),
+(1097, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:11:45'),
+(1098, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:11:49'),
+(1099, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:11:57'),
+(1100, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:11:57'),
+(1101, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:12:00'),
+(1102, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:12:01'),
+(1103, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:15:55'),
+(1104, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/securityCode.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:16:02'),
+(1105, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-18 18:16:03'),
+(1106, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:16:36'),
+(1107, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:19:25'),
+(1108, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:20:27'),
+(1109, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:20:28'),
+(1110, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:21:03'),
+(1111, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:21:21'),
+(1112, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:21:38'),
+(1113, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 18:22:07'),
+(1114, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 19:35:08'),
+(1115, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 20:25:43'),
+(1116, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 20:34:31'),
+(1117, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 20:34:32'),
+(1118, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 20:35:09'),
+(1119, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-18 20:40:48'),
+(1120, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:14:16'),
+(1121, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:15:48'),
+(1122, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:15:49'),
+(1123, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:17:25'),
+(1124, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:19:21'),
+(1125, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 16:41:12'),
+(1126, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:41:22'),
+(1127, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:41:22'),
+(1128, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 16:43:24'),
+(1129, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 17:26:39'),
+(1130, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 17:26:46'),
+(1131, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 17:26:47'),
+(1132, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:12:05'),
+(1133, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:12:14'),
+(1134, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:12:29'),
+(1135, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:12:29'),
+(1136, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:29:35'),
+(1137, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:31:28'),
+(1138, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:32:00'),
+(1139, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:32:06'),
+(1140, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:33:35'),
+(1141, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:34:44'),
+(1142, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/securityCode.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:34:44'),
+(1143, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:34:45'),
+(1144, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:36:34'),
+(1145, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/securityCode.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:36:35'),
+(1146, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:36:35'),
+(1147, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:36:46'),
+(1148, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/securityCode.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:36:46'),
+(1149, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:36:47'),
+(1150, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:37:34'),
+(1151, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:37:41'),
+(1152, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-19 22:42:20'),
+(1153, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-19 22:42:32'),
+(1154, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-20 19:17:33'),
+(1155, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-20 19:17:54'),
+(1156, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-20 19:17:54'),
+(1157, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-20 19:18:03'),
+(1158, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-20 19:18:14'),
+(1159, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-20 19:18:14'),
+(1160, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:40:10'),
+(1161, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:40:41'),
+(1162, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:40:41'),
+(1163, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-21 13:41:37'),
+(1164, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:42:47'),
+(1165, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:42:47'),
+(1166, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-21 13:43:39'),
+(1167, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:44:43'),
+(1168, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 13:44:43'),
+(1169, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-21 13:44:50');
+INSERT INTO `sc_traffic` (`trafficID`, `trafficIP`, `trafficCountryName`, `trafficCountryCode`, `trafficState`, `trafficCity`, `trafficAddressURL`, `trafficAddressFrom`, `trafficBrowser`, `trafficOS`, `trafficDate`) VALUES
+(1170, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 16:45:10'),
+(1171, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-21 16:50:28'),
+(1172, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-21 23:11:19'),
+(1173, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-23 11:32:44'),
+(1174, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-23 11:32:51'),
+(1175, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-23 11:32:52'),
+(1176, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-23 11:32:59'),
+(1177, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-23 11:41:58'),
+(1178, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-23 11:42:03'),
+(1179, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-23 11:42:13'),
+(1180, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-23 11:47:22'),
+(1181, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-23 11:47:26'),
+(1182, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-23 11:47:34'),
+(1183, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-24 17:42:24'),
+(1184, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-24 17:42:32'),
+(1185, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-24 17:42:33'),
+(1186, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-24 17:42:43'),
+(1187, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-24 17:44:29'),
+(1188, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-26 15:03:38'),
+(1189, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-26 15:03:47'),
+(1190, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-26 15:03:47'),
+(1191, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-26 15:03:56'),
+(1192, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-27 13:28:34'),
+(1193, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2019-12-27 13:28:41'),
+(1194, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-27 13:28:41'),
+(1195, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:28:48'),
+(1196, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:46:46'),
+(1197, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:47:50'),
+(1198, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:52:12'),
+(1199, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:56:04'),
+(1200, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:56:19'),
+(1201, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-27 13:58:22'),
+(1202, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2019-12-27 13:58:26'),
+(1203, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2019-12-27 13:58:38'),
+(1204, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-05 12:56:14'),
+(1205, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-05 13:00:07'),
+(1206, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-05 13:05:06'),
+(1207, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2020-01-05 13:05:13'),
+(1208, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-05 13:05:13'),
+(1209, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-05 13:05:22'),
+(1210, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-05 13:33:44'),
+(1211, '::1', 'Unknown countryyyy', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 16:15:24'),
+(1212, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 16:15:44'),
+(1213, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 16:15:51'),
+(1214, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 16:15:51'),
+(1215, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-07 16:15:59'),
+(1216, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 16:53:48'),
+(1217, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-07 16:53:56'),
+(1218, '::1', 'Unknown countryyyy', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-07 16:54:25'),
+(1219, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 16:54:29'),
+(1220, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-07 16:54:36'),
+(1221, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 17:01:14'),
+(1222, '::1', 'Netherlands', '', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-07 17:01:22'),
+(1223, '::1', 'Unknown countryyyy', 'NL', '', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-07 19:19:47'),
+(1224, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-07 19:19:56'),
+(1225, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 06:47:48'),
+(1226, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 06:47:48'),
+(1227, '::1', 'Netherlands', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 06:47:56'),
+(1228, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 06:50:42'),
+(1229, '::1', 'Unknown countryyyy', 'NL', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 06:50:50'),
+(1230, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 06:52:03'),
+(1231, '::1', 'Unknown countryyyy', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 06:52:08'),
+(1232, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 06:52:11'),
+(1233, '::1', 'Netherlands', '', '', 'Udenhout', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 06:52:18'),
+(1234, '::1', 'Netherlands', 'NL', '', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 07:01:59'),
+(1235, '::1', 'Unknown countryyyy', '', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 07:02:05'),
+(1236, '::1', 'Unknown countryyyy', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 07:02:13'),
+(1237, '::1', 'Netherlands', 'NL', '', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 07:02:35'),
+(1238, '::1', 'Netherlands', '', 'North Brabant', '', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 13:27:20'),
+(1239, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/logout.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 13:27:29'),
+(1240, '::1', 'Netherlands', '', 'North Brabant', 'Udenhout', '/PHP_CART/control_panel/login.php', '', 'Google Chrome', 'Windows 7', '2020-01-08 13:27:29'),
+(1241, '::1', 'Netherlands', 'NL', 'North Brabant', '', '/PHP_CART/control_panel/login.php', 'http://localhost/PHP_CART/control_panel/login.php', 'Google Chrome', 'Windows 7', '2020-01-08 13:27:37');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -1644,7 +1823,7 @@ ALTER TABLE `sc_themes`
 -- AUTO_INCREMENT dla tabeli `sc_traffic`
 --
 ALTER TABLE `sc_traffic`
-  MODIFY `trafficID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1064;
+  MODIFY `trafficID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1242;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

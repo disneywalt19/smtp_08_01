@@ -75,12 +75,12 @@ $config['LAYOUT_SIDEBAR_POSITION'] = 'right';
 $config['ADMIN_THEME'] = 'Default';
 $config['ADMIN_THEME_PATH'] = 'default';
 // Server email
-$config['SERVER_EMAIL_ADDRESS'] = '';
-$config['SERVER_MAIL_PORT'] = '';
-$config['SERVER_MAIL_USER'] = '';
-$config['SERVER_MAIL_PASS'] = '';
+$config['SERVER_EMAIL_ADDRESS'] = 'my.web.carrer@gmail.com';
+$config['SERVER_MAIL_PORT'] = '465';
+$config['SERVER_MAIL_USER'] = 'my.web.carrer@gmail.com';
+$config['SERVER_MAIL_PASS'] = 'biala135';
 $config['SERVER_MAIL_ENCRYPTION'] = 'ssl';
-$config['SERVER_MAIL_NAME'] = '';
+$config['SERVER_MAIL_NAME'] = 'smtp.gmail.com';
 
 
 ?>
